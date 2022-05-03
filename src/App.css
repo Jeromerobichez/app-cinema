@@ -1,6 +1,17 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
+  .App-div {
+    width: 370px;
+    padding: 0 10px;
+    background-color: rgb(250, 237, 101);
+    min-height: 1000px;
+  }
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +46,169 @@
   to {
     transform: rotate(360deg);
   }
+}
+h1 {
+  color: rgb(0, 0, 0);
+}
+h3 {
+  text-align: center;
+
+}
+.form-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+  .input-card {
+    border: 2px black solid;
+    border-radius: 6px;
+    padding: 10px;
+  }
+.input-div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.input-form {
+  width: 100%;
+  align-self: center;
+}
+.input-label-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+}
+.input-label {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+.actor-input {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 25px;
+}
+.movie-title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  border: 2px dodgerblue solid;
+  border-radius: 8px;
+  padding: 10px;
+}
+.h4-title {
+  text-align: left;
+  cursor: pointer;
+}
+.no-input {
+  margin: 15px;
+}
+.movie-number {
+  color: dodgerblue;
+ 
+  
+}
+.non-active-button {
+  border-radius: 8px;
+  padding: 5px;
+  background-color: grey;
+}
+.submit-button {
+  border-radius: 8px;
+  background-color: rgb(9, 159, 5);
+  box-shadow: none;
+  padding: 5px;
+}
+.movie-numero {
+  border-radius: 50%;
+  border: 1px black solid;
+  background-color: dodgerblue;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px
+}
+
+.movie-infos {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.movie-date {
+  font-size: 14px;
+  text-align: left;
+}
+.photo-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.actor-pics {
+  margin: 10px;
+  border: 2px solid dodgerblue;
+  border-radius: 8px;
+}
+
+.unknown-div {
+  margin: 15px;
+  font-size: 20px;
+  color: orangered;
+}
+.unknown-actor {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.sorry-div {
+  margin: 15px 0px;
+  border: 1px solid dodgerblue;
+  border-radius: 8px;
+}
+.modal-detail {
+  border: 2px solid red;
+  border-radius: 8px;
+  position: sticky;
+  top: 100px;
+  z-index: 3;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  font-size: 12px;
+}
+.overlay-active {
+  position: fixed; /* Sit on top of the page content */
+  
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.overlay-inactive {
+  display: none;
+}
+.movie-poster {
+  border: 1px solid dodgerblue;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.modal-poster{
+  border: 1px solid dodgerblue;
+  border-radius: 8px;
+  max-height: 150px;
+  width: 75px;
+  align-self: center;
 }
