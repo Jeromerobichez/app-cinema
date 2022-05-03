@@ -52,7 +52,7 @@ function Form  ()  {
      
     <div className='form-div'>
        <div >
-        <h3>This app is designed to give you the list of all the movies in which two actors appears together </h3>
+        <h3>This app is designed to give you the list of all the movies in which two actors appear together </h3>
         
           <div className='input-card'>
        <h3> Please Enter the two actors you want to search : </h3>
