@@ -21,7 +21,7 @@ const getMovieId = (e) => {
     axios
       .post('https://app-cinema-ten.vercel.app/movie-detail', {id})
       .then(res => {
-       console.log("movie-detail cest :", res.data)
+       
        setMovieTitle(res.data.title)
        setMoviePitch(res.data.overview)
        setMoviePoster(res.data.poster_path)
