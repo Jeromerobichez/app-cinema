@@ -37,23 +37,13 @@ function Form  ()  {
        setSecondActorPic(res.data.secondPic)
        setFirstActorName(res.data.nameActorOne)
        setSecondActorName(res.data.nameActorTwo)
-       console.log("res.data res.data res.data",res.data)
-     
-      /* .then(res => {
-        setFirstActorPic(res.data.firstPics)
-      }) */
-       
         
       })
       .catch(e => {
         setMessage(`Erreur lors de la création : ${e.message}`)
         console.log(message)
       })
-     
   }
-
-
-
     return (
      
     <div className='form-div'>
