@@ -2,7 +2,16 @@
 import react, {useState, useEffect} from 'react';
 import axios from 'axios'
 import Modal from './modal';
-const Results = ({data, firstActor, secondActor, firstPic, secondPic, showModal }) => {
+const Results = ({
+  data,
+  firstActor,
+  secondActor,
+  firstPic,
+  secondPic,
+  showModal, 
+  firstActorName,
+  secondActorName }) => {
+
   const [message, setMessage] = useState(null);
   const [movieId, setMovieId] = useState(null);
   const [modalDisplayed, setModalDisplayed] = useState(false);
@@ -19,7 +28,8 @@ const getMovieId = (e) => {
   const movieInfoDisplay = (id) => {
   
     axios 
-      .post('https://app-cinema.osc-fr1.scalingo.io/movie-detail', {id}) //  http://localhost:5000/movie-detail
+      /* .post('https://app-cinema.osc-fr1.scalingo.io/movie-detail', {id}) */
+      .post("http://localhost:5000/movie-detail", {id}) //  http://localhost:5000/movie-detail
       .then(res => {
        
        setMovieTitle(res.data.title)
@@ -46,7 +56,7 @@ const closeModal = () => {
       <div className="unknown-div"> Sorry we can't find any actor under the name  <span className="unknown-actor">{secondActor} </span> </div> :
       data === "no common movie" ? 
       <div className="sorry-div">
-        <div>Unfortunately {firstActor}  and {secondActor} never appeared together in a movie</div>
+        <div>Unfortunately {firstActorName}  and {secondActorName} never appeared together in a movie</div>
        
         <div className="photo-div">
         <img className="actor-pics"
@@ -61,10 +71,10 @@ const closeModal = () => {
         <div>
          
          {data.length > 1 ?
-        
-        <h3>{firstActor} and {secondActor} appareared in <span className="movie-number"> {data.length} films</span> together</h3> 
+      
+        <h3>{firstActorName} and {secondActorName} appareared in <span className="movie-number"> {data.length} films</span> together</h3> 
          : 
-         <h3>{firstActor} and {secondActor} appareared in <span className="movie-number"> {data.length} film</span> together</h3>}
+         <h3>{firstActorName} and {secondActorName} appareared in <span className="movie-number"> {data.length} film</span> together</h3>}
        {/* <Modal isShowing={modalDisplayed ? true : false}/> */}
        <div className={activeOverlay ? 'overlay-active': "overlay-inactive"}
         onClick={closeModal}> </div>

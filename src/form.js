@@ -10,6 +10,8 @@ function Form  ()  {
     const [resultats, setResultats] = useState([]);
     const [firstActorPic, setFirstActorPic] = useState('');
     const [secondActorPic, setSecondActorPic] = useState('');
+    const [firstActorName, setFirstActorName] = useState('');
+    const [secondActorName, setSecondActorName] = useState('');
 
 
       let data = {nameFirstActor, nameSecondActor };
@@ -27,11 +29,15 @@ function Form  ()  {
  const submitForm = e => {
     e.preventDefault()
     axios
-      .post('https://app-cinema.osc-fr1.scalingo.io/api', data) //  http://localhost:5000/api
+      /* .post('https://app-cinema.osc-fr1.scalingo.io/api', data)  */
+      .post('http://localhost:5000/api', data) 
       .then(res => {
        setResultats(res.data.results)
        setFirstActorPic(res.data.firstPic)
        setSecondActorPic(res.data.secondPic)
+       setFirstActorName(res.data.nameActorOne)
+       setSecondActorName(res.data.nameActorTwo)
+       console.log("res.data res.data res.data",res.data)
      
       /* .then(res => {
         setFirstActorPic(res.data.firstPics)
@@ -97,7 +103,9 @@ function Form  ()  {
    firstActor={nameFirstActor}
     secondActor={nameSecondActor} 
     firstPic={firstActorPic}
-    secondPic={secondActorPic} /> 
+    secondPic={secondActorPic}
+    firstActorName={firstActorName} 
+    secondActorName={secondActorName}/> 
     </div>
    
     )
