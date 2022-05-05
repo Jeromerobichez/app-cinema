@@ -62,8 +62,9 @@ const closeModal = () => {
          
          {data.length > 1 ?
         
-        <h3>{firstActor} and {secondActor} appareared in  <span className="movie-number"> {data.length} films</span> together</h3>
-        :  <h3>{firstActor} and {secondActor} appareared in <span className="movie-number">{data.length} film</span> together</h3>}
+        <h3>{firstActor} and {secondActor} appareared in <span className="movie-number"> {data.length} films</span> together</h3> 
+         : 
+         <h3>{firstActor} and {secondActor} appareared in <span className="movie-number"> {data.length} film</span> together</h3>}
        {/* <Modal isShowing={modalDisplayed ? true : false}/> */}
        <div className={activeOverlay ? 'overlay-active': "overlay-inactive"}
         onClick={closeModal}> </div>
