@@ -27,7 +27,7 @@ function Form  ()  {
  const submitForm = e => {
     e.preventDefault()
     axios
-      .post('https://app-cinema-ten.vercel.app/api', data)
+      .post('https://app-cinema.osc-fr1.scalingo.io/api', data)
       .then(res => {
        setResultats(res.data.results)
        setFirstActorPic(res.data.firstPic)

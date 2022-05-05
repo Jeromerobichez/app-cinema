@@ -19,7 +19,7 @@ const getMovieId = (e) => {
   const movieInfoDisplay = (id) => {
   
     axios
-      .post('https://app-cinema-ten.vercel.app/movie-detail', {id})
+      .post('https://app-cinema.osc-fr1.scalingo.io/movie-detail', {id})
       .then(res => {
        
        setMovieTitle(res.data.title)
