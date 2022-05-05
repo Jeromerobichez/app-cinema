@@ -27,7 +27,7 @@ function Form  ()  {
  const submitForm = e => {
     e.preventDefault()
     axios
-      .post('https://app-cinema.osc-fr1.scalingo.io/api', data)
+      .post('https://app-cinema.osc-fr1.scalingo.io/api', data) //  http://localhost:5000/api
       .then(res => {
        setResultats(res.data.results)
        setFirstActorPic(res.data.firstPic)
@@ -62,7 +62,7 @@ function Form  ()  {
               <div className='input-label-div'>
             <label className='input-label'> the first actor : 
             <input type="text" id="id-input" name="actor-input-1" className='actor-input'
-             defaultValue="first actor"
+             placeholder="first actor"
             
              onChange={(e) => setNameFirstActor(e.target.value)}/> 
             
@@ -72,7 +72,7 @@ function Form  ()  {
             <div  className='input-label-div'>
             <label className='input-label'> the second actor : 
             <input type="text" id="id-input" name="actor-input-2" className='actor-input'
-            defaultValue="second actor"
+           placeholder="second actor"
             onChange={(e) => setNameSecondActor(e.target.value)}/>
             </label>
             </div>

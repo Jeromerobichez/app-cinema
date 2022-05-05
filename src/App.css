@@ -9,7 +9,7 @@
   .App-div {
     width: 370px;
     padding: 0 10px;
-    background-color: rgb(250, 237, 101);
+    background-color: rgba(250,205,72,255);
     min-height: 1000px;
   }
 
@@ -92,12 +92,13 @@ h3 {
   border: 2px solid black;
   border-radius: 5px;
   height: 25px;
+  color: black;
 }
 .movie-title {
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
-  border: 2px dodgerblue solid;
+  border: 2px rgb(64,164,236) solid;
   border-radius: 8px;
   padding: 10px;
 }
@@ -109,7 +110,7 @@ h3 {
   margin: 15px;
 }
 .movie-number {
-  color: dodgerblue;
+  color: rgb(64,164,236);
  
   
 }
@@ -120,14 +121,14 @@ h3 {
 }
 .submit-button {
   border-radius: 8px;
-  background-color: rgb(9, 159, 5);
+  background-color: rgb(64,164,236);
   box-shadow: none;
   padding: 5px;
 }
 .movie-numero {
   border-radius: 50%;
   border: 1px black solid;
-  background-color: dodgerblue;
+  background-color: rgb(64,164,236);
   width: 30px;
   height: 30px;
   margin-right: 8px;
@@ -154,7 +155,7 @@ h3 {
 }
 .actor-pics {
   margin: 10px;
-  border: 2px solid dodgerblue;
+  border: 2px solid rgb(64,164,236);
   border-radius: 8px;
 }
 
@@ -169,7 +170,7 @@ h3 {
 }
 .sorry-div {
   margin: 15px 0px;
-  border: 1px solid dodgerblue;
+  border: 1px solid rgb(64,164,236);
   border-radius: 8px;
 }
 .modal-detail {
@@ -201,12 +202,12 @@ h3 {
   display: none;
 }
 .movie-poster {
-  border: 1px solid dodgerblue;
+  border: 1px solid rgb(64,164,236);
   border-radius: 8px;
   cursor: pointer;
 }
 .modal-poster{
-  border: 1px solid dodgerblue;
+  border: 1px solid rgb(64,164,236);
   border-radius: 8px;
   max-height: 150px;
   width: 75px;
