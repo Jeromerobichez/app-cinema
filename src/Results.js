@@ -105,7 +105,8 @@ const closeModal = () => {
         </div>
         : 
 
-        <div className="no-input">Merci d'entrer le nom des deux acteurs</div>
+ 
+          <div className="no-input">The list will appear here</div> 
     )
 }
 

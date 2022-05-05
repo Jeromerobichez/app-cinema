@@ -76,11 +76,18 @@ function Form  ()  {
             onChange={(e) => setNameSecondActor(e.target.value)}/>
             </label>
             </div>
+            <div className='input-submit-div'>
+              <label>
+                <input type="submit"
+                id="submit-input"
+                className={nameFirstActor != '' && nameSecondActor!= '' ? 'submit-button' : 'non-active-button'}
+                onClick={submitForm}
+                value="Submit your two actors" />
+                 
+              </label>
+            </div>
             </form>
             </div>
-<button
-className={nameFirstActor != '' && nameSecondActor!= '' ? 'submit-button' : 'non-active-button'}
-onClick={submitForm}> Submit your two actors and the see the list below : </button>
 
         </div> 
        

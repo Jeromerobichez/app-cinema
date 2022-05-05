@@ -108,6 +108,7 @@ h3 {
 }
 .no-input {
   margin: 15px;
+  font-style: italic;
 }
 .movie-number {
   color: rgb(64,164,236);
@@ -118,12 +119,24 @@ h3 {
   border-radius: 8px;
   padding: 5px;
   background-color: grey;
+  color: black;
+  font-size: 16px;
+  max-width: 332px;
 }
 .submit-button {
   border-radius: 8px;
   background-color: rgb(64,164,236);
+  color: black;
   box-shadow: none;
   padding: 5px;
+  font-size: 16px;
+  max-width: 332px;
+  height: auto;
+}
+#submit-input{
+  margin-top: 30px;
+  height: 50px;
+  align-self: center;
 }
 .movie-numero {
   border-radius: 50%;
