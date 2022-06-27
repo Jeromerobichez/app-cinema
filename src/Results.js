@@ -28,7 +28,7 @@ const getMovieId = (e) => {
   const movieInfoDisplay = (id) => {
   
     axios 
-      .post('https://app-cinema.osc-fr1.scalingo.io/movie-detail', {id}) 
+      .post('https://back-end-cinema.osc-fr1.scalingo.io/movie-detail', {id}) 
       /* .post("http://localhost:5000/movie-detail", {id}) */ //  http://localhost:5000/movie-detail
       .then(res => {
        
