@@ -29,7 +29,7 @@ function Form  ()  {
  const submitForm = e => {
     e.preventDefault()
     axios
-      .post('https://back-end-cinema.osc-fr1.scalingo.io', data)
+      .post('https://back-end-cinema.osc-fr1.scalingo.io/api', data)
       /* .post('http://localhost:5000/api', data)  */
       .then(res => {
        setResultats(res.data.results)
